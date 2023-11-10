@@ -8,12 +8,12 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/tom/slave-dir/apache-maven-3.9.5/bin/mvn install'
+			  sh '/home/jerry/apache-maven-3.9.5/bin/mvn install'
 	                 }}
 		stage('Deployment'){
 		    steps {
 			
-			sh 'cp target/Slack.war /home/tom/slave-dir/apache-tomcat-9.0.82/webapps'
+			sh 'cp target/Slack.war /home/jerry/apache-tomcat-9.0.82/webapps'
 			}}
 		
 			}}

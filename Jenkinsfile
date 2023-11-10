@@ -15,9 +15,5 @@ pipeline {
 			
 			sh 'cp target/Slack.war /home/tom/slave-dir/apache-tomcat-9.0.82/webapps'
 			}}
-		stage('slack notification'){
-		    steps {
-			
-			slackSend channel: 'grras-test', color: 'green', message: 'welcome to slack grras', teamDomain: 'devops', tokenCredentialId: 'test-token'
+		
 			}}
-	}}
